@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class GreetingTest {
     @Test
     void testHelloBasic() {
-        assertEquals("Hello, World", "test failed");
+        Greeting greeting = new Greeting(); // ← คลาสนี้ยังไม่มี
+        String result = greeting.sayHello("World");
+        assertEquals("Hello, World", result);
     }
 }
